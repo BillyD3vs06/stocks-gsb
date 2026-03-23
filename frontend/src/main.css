@@ -1,0 +1,60 @@
+#profit_lose_news{
+    height: 1.5vw;
+    width: 103%;
+    border: 0.1vw solid #000;
+    background-color: #000;
+    margin-top: -0.7vw;
+    margin-left: -0.7vw;
+}
+#nav_holder{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5vw;
+}
+#Market_nav{
+    height: 2vw;
+    width: 14vw;
+    border: 0.1vw solid #000;
+    text-align: center;
+}
+
+#Buy_Sell_nav{
+    height: 2vw;
+    width: 14vw;
+    border: 0.1vw solid #000;
+    text-align: center;
+}
+#News_nav{
+    height: 2vw;
+    width: 14vw;
+    border: 0.1vw solid #000;
+    text-align: center;
+}
+#Telegram_Bot_nav{
+    height: 2vw;
+    width: 14vw;
+    border: 0.1vw solid #000;
+    text-align: center;
+}
+#login_Signup_nav{
+    height: 2vw;
+    width: 14vw;
+    border: 0.1vw solid #000;
+    text-align: center;
+}
+#Aboutus_nav{
+    height: 2vw;
+    width: 14vw;
+    border: 0.1vw solid #000;
+    text-align: center;
+}
+.nav_tab:hover{
+ background-color: yellow;
+}
+#Contact{
+    height: 10vw;
+    width: auto;
+    background-color: grey;
+    margin-top: 5vw;
+    
+}
