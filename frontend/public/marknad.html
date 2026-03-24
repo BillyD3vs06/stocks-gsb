@@ -3,9 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marknad</title>
+    <title>Market</title>
+    <link rel="stylesheet" href="../src/main.css">
+    <style>
+        #side-bg {
+            background: #000;
+            position: absolute;
+            top: 8%;
+            bottom: 8%;
+            left: 3%;
+            right: 3%;
+            margin: auto; 
+        }
+        #price {
+            background: lightgray;
+            position: absolute;
+            top: 3%;
+            bottom: 60%;
+            left: 20%;
+            right: 20%;
+            margin: auto;
+            text-align: center;
+        }
+        #value {
+            background: lightgray;
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            right: 30%;
+            bottom: 30%;
+            text-align: center;
+        }
+        #buy {
+            background: lightgray;
+            position: absolute;
+            top: 80%;
+            left: 20%;
+            right: 65%;
+            bottom: 10%;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #sell {
+            background: lightgray;
+            position: absolute;
+            top: 80%;
+            left: 65%;
+            right: 20%;
+            bottom: 10%;
+            text-align: center;
+            cursor: pointer;
+        }
+
+
+    </style>
 </head>
 <body>
+
+    <header>
+  <div id="profit_lose_news">
+  </div>
+  <nav>
+    <div id="nav_holder">
+      <a href="marknad.html"><div id="Market_nav" class="nav_tab">Market</div></a>
+      <a href="kop-salj.html"><div id="Buy_Sell_nav" class="nav_tab">Buy/Sell</div></a>
+      <a href="nyheter.html"><div id="News_nav" class="nav_tab">News</div></a>
+      <a href="telegram-bot.html"><div id="Telegram_Bot_nav" class="nav_tab">Telegram bot</div></a>
+      <a href="login-signup.html"><div id="login_Signup_nav" class="nav_tab">login/Sign up</div></a>
+      <a href="about-us.html"><div id="Aboutus_nav" class="nav_tab">About us</div></a>
+    </div>
+  </nav>
+ </header>
+
+ <div class="main-bg">
+    <div id="side-bg">
+
+        <div id="price">Status/Price</div>
+        <div id="value">Value</div>
+        <button id="buy">Buy</button>
+        <button id="sell">Sell</button>
+
+    </div>
+ </div>
+
+ <footer id="contact">
+    <p>Contact Us</p>
+ </footer>
+
+
     
 </body>
 </html>

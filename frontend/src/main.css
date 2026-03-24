@@ -58,3 +58,61 @@
     margin-top: 5vw;
     
 }
+
+.main-bg {
+    background: yellow;
+    width: 94%;
+    height: 60%;
+    margin: 3%;
+
+    position: absolute;
+    top: 0;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
+
+#emulator-main {
+    background: black;
+    color: white;
+    position: absolute;
+    top: 8%;
+    bottom: 8%;
+    left: 3%;
+    right: 30%;
+    
+    margin: auto;
+    font-size: larger;
+    text-align: center;
+}
+
+#status {
+    background-color: black;
+    color: white;
+    position: absolute;
+
+    top: 8%;
+    bottom: 8%;
+    left: 73%;
+    right: 3%;
+    
+    margin: auto;
+    font-size: larger;
+    text-align: center;
+}
+
+#contact {
+    background-color: lightgray;
+
+    position: absolute;
+
+    top: 75%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    color: black;
+    font-size: larger;
+}
