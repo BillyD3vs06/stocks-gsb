@@ -113,3 +113,86 @@
     margin-top:33%;
     box-shadow: 0vw 0vw 5vw 1vw gold ;
 }
+
+/* anvands i login-signup.html, about-us.html och registrera.html */
+.page_section{
+    display: flex;
+    justify-content: center;
+    min-height: 28vw;
+    padding: 60px 32px;
+}
+
+
+/* används i login-signup.html, about-us.html och registrera.html */
+.login_card,
+.about_card{
+    width: min(32vw, 92%);
+    min-width: 320px;
+    background-color: lightgrey;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+
+h1{
+    margin-top: 0;
+    text-align: center;
+}
+
+
+/* används i login-signup.html */
+.login_form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+
+/* används i login-signup.html */
+.login_form input{
+    padding: 15px 2px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    font-size: 100%;
+}
+
+
+/* används i login-signup.html */
+.login_button{
+    display: inline-block;
+    padding: 15px 2px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    background-color: gold;
+    color: #000;
+    font-size: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* används i login-signup.html */
+.login_button:hover{
+    background-color: #EFBF04;
+}
+
+
+/* används i about-us.html */
+.about_link{
+    display: inline-block;
+    margin-top: 16px;
+    color: #000;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
+/* används i about-us.html */
+.about_card p{
+    line-height: 20px;
+}
+
+
