@@ -58,3 +58,49 @@
     margin-top: 5vw;
     
 }
+#news{
+    display: flex;
+    flex-wrap: wrap;
+    height: 20vw;
+    width: 20vw;
+    border: solid 0.1vw grey;
+    background-color: lightgrey;
+    border-radius: 3vw;
+
+}
+#picture{
+    height: 10vw;
+    width: 15vw;
+    border: solid 0.2vw #000;
+    text-align: center;
+    margin-left: 13%;
+    margin-top: 1vw;
+    border-radius: 1vw;
+
+}
+#new_title{
+font-family: 'Times New Roman', Times, serif;
+margin-left:41%;
+margin-top:-0.1vw ;
+}
+#news_des{
+    margin-top:-1vw;
+    flex-wrap: wrap;
+    display: flex;
+
+}
+#telebot_holder{
+    height: 40vw;
+    width: 60%;
+    margin-left: 19%;
+    background-color: #000;
+    border: solid yellow 1vw;
+    border-radius: 3vw;
+}
+#telegram_btn{
+    background-color: green;
+    border-radius: 1vw;
+    margin-left: 40%;
+    margin-top:33%;
+    box-shadow: 0vw 0vw 5vw 1vw gold ;
+}
