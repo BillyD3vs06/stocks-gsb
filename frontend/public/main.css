@@ -6,11 +6,13 @@
     margin-top: -0.7vw;
     margin-left: -0.7vw;
 }
+
 #nav_holder{
     display: flex;
     flex-wrap: wrap;
     gap: 2.5vw;
 }
+
 #Market_nav{
     height: 2vw;
     width: 14vw;
@@ -24,40 +26,46 @@
     border: 0.1vw solid #000;
     text-align: center;
 }
+
 #News_nav{
     height: 2vw;
     width: 14vw;
     border: 0.1vw solid #000;
     text-align: center;
 }
+
 #Telegram_Bot_nav{
     height: 2vw;
     width: 14vw;
     border: 0.1vw solid #000;
     text-align: center;
 }
+
 #login_Signup_nav{
     height: 2vw;
     width: 14vw;
     border: 0.1vw solid #000;
     text-align: center;
 }
+
 #Aboutus_nav{
     height: 2vw;
     width: 14vw;
     border: 0.1vw solid #000;
     text-align: center;
 }
+
 .nav_tab:hover{
- background-color: yellow;
+    background-color: yellow;
 }
+
 #Contact{
     height: 10vw;
     width: auto;
     background-color: grey;
     margin-top: 5vw;
-    
 }
+
 #news{
     display: flex;
     flex-wrap: wrap;
@@ -66,8 +74,8 @@
     border: solid 0.1vw grey;
     background-color: lightgrey;
     border-radius: 3vw;
-
 }
+
 #picture{
     height: 10vw;
     width: 15vw;
@@ -76,19 +84,20 @@
     margin-left: 13%;
     margin-top: 1vw;
     border-radius: 1vw;
+}
 
-}
 #new_title{
-font-family: 'Times New Roman', Times, serif;
-margin-left:41%;
-margin-top:-0.1vw ;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 41%;
+    margin-top: -0.1vw;
 }
+
 #news_des{
-    margin-top:-1vw;
+    margin-top: -1vw;
     flex-wrap: wrap;
     display: flex;
-
 }
+
 #telebot_holder{
     height: 40vw;
     width: 60%;
@@ -97,10 +106,95 @@ margin-top:-0.1vw ;
     border: solid yellow 1vw;
     border-radius: 3vw;
 }
+
 #telegram_btn{
     background-color: green;
     border-radius: 1vw;
     margin-left: 40%;
-    margin-top:33%;
-    box-shadow: 0vw 0vw 5vw 1vw gold ;
+    margin-top: 33%;
+    box-shadow: 0vw 0vw 5vw 1vw gold;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #fff;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* anvands i login-signup.html, about-us.html och registrera.html */
+.page_section{
+    display: flex;
+    justify-content: center;
+    min-height: 28vw;
+    padding: 60px 32px;
+}
+
+/* används i login-signup.html, about-us.html och registrera.html */
+.login_card,
+.about_card{
+    width: min(32vw, 92%);
+    min-width: 320px;
+    background-color: lightgrey;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+h1{
+    margin-top: 0;
+    text-align: center;
+}
+
+/* används i login-signup.html */
+.login_form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+/* används i login-signup.html */
+.login_form input{
+    padding: 15px 2px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    font-size: 100%;
+}
+
+/* används i login-signup.html */
+.login_button{
+    display: inline-block;
+    padding: 15px 2px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    background-color: gold;
+    color: #000;
+    font-size: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* används i login-signup.html */
+.login_button:hover{
+    background-color: #EFBF04;
+}
+
+/* används i about-us.html */
+.about_link{
+    display: inline-block;
+    margin-top: 16px;
+    color: #000;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* används i about-us.html */
+.about_card p{
+    line-height: 20px;
 }
