@@ -163,3 +163,52 @@ margin-top:-0.1vw ;
     margin-top:33%;
     box-shadow: 0vw 0vw 5vw 1vw gold ;
 }
+#side-bg {
+    background: #000;
+    position: absolute;
+    top: 8%;
+    bottom: 8%;
+    left: 3%;
+    right: 3%;
+    margin: auto; 
+}
+#price {
+    background: lightgray;
+    position: absolute;
+    top: 3%;
+    bottom: 60%;
+    left: 20%;
+    right: 20%;
+    margin: auto;
+    text-align: center;
+}
+#value {
+    background: lightgray;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    right: 30%;
+    bottom: 30%;
+    text-align: center;
+}
+#buy {
+    background: lightgray;
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    right: 65%;
+    bottom: 10%;
+    text-align: center;
+    cursor: pointer;
+}
+
+#sell {
+    background: lightgray;
+    position: absolute;
+    top: 80%;
+    left: 65%;
+    right: 20%;
+    bottom: 10%;
+    text-align: center;
+    cursor: pointer;
+}
