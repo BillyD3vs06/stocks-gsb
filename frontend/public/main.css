@@ -58,7 +58,7 @@
     margin-top: 5vw;
     
 }
-<<<<<<< HEAD:frontend/src/main.css
+
 
 .main-bg {
     background: yellow;
@@ -116,7 +116,7 @@
     text-align: center;
     color: black;
     font-size: larger;
-=======
+}
 #news{
     display: flex;
     flex-wrap: wrap;
@@ -162,5 +162,4 @@ margin-top:-0.1vw ;
     margin-left: 40%;
     margin-top:33%;
     box-shadow: 0vw 0vw 5vw 1vw gold ;
->>>>>>> 48cc16817fcb0658d472ab8e4b45702f6c71fc1e:frontend/public/main.css
 }
