@@ -6,11 +6,13 @@
     margin-top: -0.7vw;
     margin-left: -0.7vw;
 }
+
 #nav_holder{
     display: flex;
     flex-wrap: wrap;
     gap: 2.5vw;
 }
+
 #Market_nav{
     height: 2vw;
     width: 14vw;
@@ -24,39 +26,46 @@
     border: 0.1vw solid #000;
     text-align: center;
 }
+
 #News_nav{
     height: 2vw;
     width: 14vw;
     border: 0.1vw solid #000;
     text-align: center;
 }
+
 #Telegram_Bot_nav{
     height: 2vw;
     width: 14vw;
     border: 0.1vw solid #000;
     text-align: center;
 }
+
 #login_Signup_nav{
     height: 2vw;
     width: 14vw;
     border: 0.1vw solid #000;
     text-align: center;
 }
+
 #Aboutus_nav{
     height: 2vw;
     width: 14vw;
     border: 0.1vw solid #000;
     text-align: center;
 }
+
 .nav_tab:hover{
- background-color: yellow;
+    background-color: yellow;
 }
+
 #Contact{
     height: 10vw;
     width: auto;
     background-color: grey;
     margin-top: 5vw;
 }
+<<<<<<< HEAD
 
 .main-bg {
     background: yellow;
@@ -101,6 +110,8 @@
     font-size: larger;
     text-align: center;
 }
+=======
+>>>>>>> bf35ef2e6d524bf04011e1538fe087abfb995525
 #news{
     display: flex;
     flex-wrap: wrap;
@@ -109,8 +120,8 @@
     border: solid 0.1vw grey;
     background-color: lightgrey;
     border-radius: 3vw;
-
 }
+
 #picture{
     height: 10vw;
     width: 15vw;
@@ -119,19 +130,20 @@
     margin-left: 13%;
     margin-top: 1vw;
     border-radius: 1vw;
+}
 
-}
 #new_title{
-font-family: 'Times New Roman', Times, serif;
-margin-left:41%;
-margin-top:-0.1vw ;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 41%;
+    margin-top: -0.1vw;
 }
+
 #news_des{
-    margin-top:-1vw;
+    margin-top: -1vw;
     flex-wrap: wrap;
     display: flex;
-
 }
+
 #telebot_holder{
     height: 40vw;
     width: 60%;
@@ -140,6 +152,7 @@ margin-top:-0.1vw ;
     border: solid yellow 1vw;
     border-radius: 3vw;
 }
+
 #telegram_btn{
     background-color: green;
     border-radius: 1vw;
@@ -147,52 +160,86 @@ margin-top:-0.1vw ;
     margin-top:33%;
     box-shadow: 0vw 0vw 5vw 1vw gold ;
 }
-#side-bg {
-    background: #000;
-    position: absolute;
-    top: 8%;
-    bottom: 8%;
-    left: 3%;
-    right: 3%;
-    margin: auto; 
-}
-#price {
-    background: lightgray;
-    position: absolute;
-    top: 3%;
-    bottom: 60%;
-    left: 20%;
-    right: 20%;
-    margin: auto;
-    text-align: center;
-}
-#value {
-    background: lightgray;
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    right: 30%;
-    bottom: 30%;
-    text-align: center;
-}
-#buy {
-    background: lightgray;
-    position: absolute;
-    top: 80%;
-    left: 20%;
-    right: 65%;
-    bottom: 10%;
-    text-align: center;
-    cursor: pointer;
+
+/* anvands i login-signup.html, about-us.html och registrera.html */
+.page_section{
+    display: flex;
+    justify-content: center;
+    min-height: 28vw;
+    padding: 60px 32px;
 }
 
-#sell {
-    background: lightgray;
-    position: absolute;
-    top: 80%;
-    left: 65%;
-    right: 20%;
-    bottom: 10%;
-    text-align: center;
-    cursor: pointer;
+
+/* används i login-signup.html, about-us.html och registrera.html */
+.login_card,
+.about_card{
+    width: min(32vw, 92%);
+    min-width: 320px;
+    background-color: lightgrey;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 32px;
+    box-sizing: border-box;
 }
+
+
+h1{
+    margin-top: 0;
+    text-align: center;
+}
+
+
+/* används i login-signup.html */
+.login_form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+
+/* används i login-signup.html */
+.login_form input{
+    padding: 15px 2px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    font-size: 100%;
+}
+
+
+/* används i login-signup.html */
+.login_button{
+    display: inline-block;
+    padding: 15px 2px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    background-color: gold;
+    color: #000;
+    font-size: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* används i login-signup.html */
+.login_button:hover{
+    background-color: #EFBF04;
+}
+
+
+/* används i about-us.html */
+.about_link{
+    display: inline-block;
+    margin-top: 16px;
+    color: #000;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
+/* används i about-us.html */
+.about_card p{
+    line-height: 20px;
+}
+
+
