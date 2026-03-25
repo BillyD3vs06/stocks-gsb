@@ -65,6 +65,56 @@
     background-color: grey;
     margin-top: 5vw;
 }
+
+#side-bg {
+    height: 40vw;
+    width: 60%;
+    border: solid 1vw #EFBF04;
+    background-color: #000;
+    margin-left: 19% ;
+
+}
+#price{
+    background-color: #EFBF04;
+}
+#value{
+    background-color: #EFBF04;
+}
+
+#kop-salj-holder{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15%;
+    width: 70%;
+    gap: 5%;
+    border: #EFBF04 solid 0.5vw;
+    background-color: #EFBF04;
+    border-radius: 0.5vw;
+    margin-top: 5vw;
+    height: 40vw;
+}
+
+#emulator-main {
+    background: #000;
+    color: white;
+    width: 65%;
+    height:100%;
+    margin: 0px;
+    font-size: larger;
+    text-align: center;
+}
+
+#status {
+    background-color: black;
+    color: white;
+    width: 30%;
+    margin: 0px;
+    height:100%;
+    font-size: larger;
+    text-align: center;
+}
+
+
 #news{
     display: flex;
     flex-wrap: wrap;
