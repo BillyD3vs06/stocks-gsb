@@ -65,33 +65,41 @@
     background-color: grey;
     margin-top: 5vw;
 }
-<<<<<<< HEAD
 
-.main-bg {
-    background: yellow;
-    width: 94%;
-    height: 60%;
-    margin: 3%;
+#side-bg {
+    height: 40vw;
+    width: 60%;
+    border: solid 1vw #EFBF04;
+    background-color: #000;
+    margin-left: 19% ;
 
-  position:absolute;
-    top: 0;
-    bottom: 15%;
-    left: 0;
-    right: 0;
-    
-    margin: auto;
+}
+#price{
+    background-color: #EFBF04;
+}
+#value{
+    background-color: #EFBF04;
+}
+
+#kop-salj-holder{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15%;
+    width: 70%;
+    gap: 5%;
+    border: #EFBF04 solid 0.5vw;
+    background-color: #EFBF04;
+    border-radius: 0.5vw;
+    margin-top: 5vw;
+    height: 40vw;
 }
 
 #emulator-main {
-    background: black;
+    background: #000;
     color: white;
-    position: absolute;
-    top: 8%;
-    bottom: 8%;
-    left: 3%;
-    right: 30%;
-    
-    margin: auto;
+    width: 65%;
+    height:100%;
+    margin: 0px;
     font-size: larger;
     text-align: center;
 }
@@ -99,19 +107,14 @@
 #status {
     background-color: black;
     color: white;
-    position: absolute;
-
-    top: 8%;
-    bottom: 8%;
-    left: 73%;
-    right: 3%;
-    
-    margin: auto;
+    width: 30%;
+    margin: 0px;
+    height:100%;
     font-size: larger;
     text-align: center;
 }
-=======
->>>>>>> bf35ef2e6d524bf04011e1538fe087abfb995525
+
+
 #news{
     display: flex;
     flex-wrap: wrap;
