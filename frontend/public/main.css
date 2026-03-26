@@ -10,53 +10,83 @@
 #nav_holder{
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5vw;
+    gap: 0;
 }
 
+/* används i navbaren på alla sidor för att ta bort vanlig länkstil och få knapparna att sitta ihop */
+#nav_holder a{
+    display: block;
+    text-decoration: none;
+    margin-left: -0.1vw;
+}
+
+#nav_holder a:first-child{
+    margin-left: 0;
+}
+
+/* används i navbaren pa alla sidor for rundade knappar , och centrera knappar */
+.nav_tab{
+    display: flex;
+    color: gold;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.4vw;
+    background-color: #f3f3f3;
+
+}
+
+/* används i navbaren på alla sidor för att ge samma storlek till varje knapp */
+#Home_nav,
+#Buy_Sell_nav,
+#login_Signup_nav,
+#Aboutus_nav,
+#Telegram_Bot_nav,
+#News_nav,
 #Market_nav{
     height: 2vw;
-    width: 14vw;
+    width: 11vw;
     border: 0.1vw solid #000;
     text-align: center;
 }
 
-#Buy_Sell_nav{
-    height: 2vw;
-    width: 14vw;
-    border: 0.1vw solid #000;
-    text-align: center;
-}
 
-#News_nav{
-    height: 2vw;
-    width: 14vw;
-    border: 0.1vw solid #000;
-    text-align: center;
-}
 
-#Telegram_Bot_nav{
-    height: 2vw;
-    width: 14vw;
-    border: 0.1vw solid #000;
-    text-align: center;
-}
-
-#login_Signup_nav{
-    height: 2vw;
-    width: 14vw;
-    border: 0.1vw solid #000;
-    text-align: center;
-}
-
-#Aboutus_nav{
-    height: 2vw;
-    width: 14vw;
-    border: 0.1vw solid #000;
-    text-align: center;
-}
 
 .nav_tab:hover{
-    background-color: yellow;
+    color: black;
+    background-color: #EFBF04;
+}
+
+/* används till about-us.html för att stoppa horisontell scroll när footern visas */
+body.all_pages{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* används till about-us.html för en mer landningsside-lik navbarplacering */
+body.all_pages #nav_holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: min(94%, 1200px);
+    margin: 0 auto;
+    padding: 1vw 1.2vw 0.6vw;
+    gap: 1.1vw;
+}
+
+/* används till about-us.html för att flytta login-knappen längst till höger */
+body.all_pages #nav_holder a:has(#login_Signup_nav){
+    position: static;
+    margin-left: 0;
+}
+
+/* anvands till about-us.html for att halla footern inom sidans bredd */
+body.all_pages #Contact{
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 2vw;
+    padding: 16px 24px;
 }
 
 #Contact{
@@ -162,12 +192,18 @@
     box-shadow: 0vw 0vw 5vw 1vw gold ;
 }
 
-/* anvands i login-signup.html, about-us.html och registrera.html */
-.page_section{
+/* används i login-signup.html, about-us.html och registrera.html */
+body.all_pages .page_section{
     display: flex;
     justify-content: center;
     min-height: 28vw;
     padding: 60px 32px;
+}
+
+/* används i about-us.html för att minska hur långt man behöver scrolla */
+body.all_pages .page_section{
+    min-height: 18vw;
+    padding: 32px 24px;
 }
 
 
@@ -186,7 +222,7 @@
 
 input::placeholder {
     color: rgb(82, 82, 82); /* Placeholder text color */
-    opacity: 1; /* Fixes Firefox opacity issues */
+    opacity: 1; /* Fixes opacity issues */
   }
 
 h1{
@@ -205,7 +241,7 @@ h1{
 }
 
 
-/* används i login-signup.html */
+/* används i login-signup.html, registrera.html och alla contact */
 .registrera_form input,
 .login_form input{
     padding: 15px 2px;
@@ -230,17 +266,14 @@ h1{
 }
 
 
-/* används i login-signup.html */
+
 .login_button:hover{
     background-color: #EFBF04;
 }
-/* används i registrera.html */
-.registrera_button:hover{
-    background-color: #EFBF04;
-}
 
 
-/* används i about-us.html */
+
+/* används i login-.html */
 .about_link{
     display: inline-block;
     margin-top: 16px;
@@ -250,6 +283,7 @@ h1{
 }
 
 .about_link:hover{
+    
     color: #EFBF04;
 }
 
