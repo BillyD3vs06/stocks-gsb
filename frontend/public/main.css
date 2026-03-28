@@ -96,9 +96,12 @@ body.all_pages #nav_holder a:has(#login_Signup_nav){
     padding: 1.2rem 2rem;
     border-top: 0.18rem solid gold;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-/* anvands i contact footern for modernare skrivfalt utan att flytta footern */
+/* används i contact footern for modernare skrivfalt utan att flytta footern */
 #Contact input{
     width: 18rem;
     display: block;
@@ -127,6 +130,10 @@ body.all_pages #nav_holder a:has(#login_Signup_nav){
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#Contact br{
+    display: none;
 }
 
 #Contact input:focus{
