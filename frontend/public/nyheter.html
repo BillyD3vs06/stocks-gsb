@@ -22,16 +22,14 @@
           </div>
         </nav>
        </header>
-       <button id="Lägg-Till-Nyhet">Lägg till nyhet +</button>
+       <button id="Lägg-Till-Nyhet" onclick="newsButton()">Lägg till nyhet +</button>
        <div id="news_holder">
-<div id="news">
-    <div id="picture">bild</div>
-    <h3 id="new_title">nyhet</h3>
-    <p id="news_des">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vel mollitia tempora illo magnam explicabo expedita dolore ratione suscipit atque, hic tenetur voluptas quo ad excepturi eos impedit. Fuga, impedit?</p>
+<div id="news" class="news">
+    <div id="picture" class="newsImage">Picture</div>
+    <h3 id="new_title" class="newsTitle">News</h3>
+    <p id="news_des" class="newsDes">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vel mollitia tempora illo magnam explicabo expedita dolore ratione suscipit atque, hic tenetur voluptas quo ad excepturi eos impedit. Fuga, impedit?</p>
 </div>
-<br>
-<br>
-<br>
+
 </div>
        <footer>
         <div id="Contact">
@@ -40,5 +38,6 @@
           <button>Send</button>
         </div>
         </footer>
+  <script src="newsLogic.js"></script>
 </body>
 </html>
