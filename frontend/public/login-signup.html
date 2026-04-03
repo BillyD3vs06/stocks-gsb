@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn/SignUp</title>
     <link rel="stylesheet" href="main.css">
+    <script src="loginLogic.js" defer></script>
 </head>
 <body class="all_pages">
     <header>
@@ -32,10 +33,11 @@
 
 
             <form class="login_form" novalidate>
-                <input type="text" placeholder="E-mail">
-                <input type="password" placeholder="Password">
-                <button type="button" class="login_button">Login</button>
+                <input type="text" placeholder="E-mail" id="login">
+                <input type="password" placeholder="Password" id="password">
+                <button type="button" class="login_button" id="btn_login">Login</button>
                 <a href="./registrera.html" class="about_link">Dont have an account? <br> Create one today!</a>
+                <p id="login_stat_check"></p>
             </form>
 
 
