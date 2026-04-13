@@ -8,7 +8,7 @@ function NavBar() {
         <li><a href="kop-salj.html">Köp/Sälj</a></li>
         <li><a href="nyheter.html">Nyheter</a></li>
         <li><a href="telegram-bot.html">Telegram bot</a></li>
-        <li><a href="login-signup.html">LogIn/SignUp</a></li>
+        <li><a href="login-signup.php">LogIn/SignUp</a></li>
         <li><a href="about-us.html">About Us</a></li>
       </ul>
     </nav>

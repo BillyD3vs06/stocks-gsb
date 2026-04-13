@@ -1,3 +1,7 @@
+<?php
+$message = $_GET['message'] ?? '';
+$isSuccess = isset($_GET['success']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn/SignUp</title>
     <link rel="stylesheet" href="main.css">
-    <script src="loginLogic.js" defer></script>
 </head>
 <body class="all_pages">
     <header>
@@ -18,7 +21,7 @@
                 <a href="./nyheter.html"><div id="News_nav" class="nav_tab">News</div></a>
                 <a href="./telegram-bot.html"><div id="Telegram_Bot_nav" class="nav_tab">Telegram bot</div></a>
                 <a href="./about-us.html"><div id="Aboutus_nav" class="nav_tab">About us</div></a>
-                <a href="./login-signup.html"><div id="login_Signup_nav" class="nav_tab">Login/Sign up</div></a>
+                <a href="./login-signup.php"><div id="login_Signup_nav" class="nav_tab">Login/Sign up</div></a>
  
 
             </div>
@@ -30,14 +33,18 @@
         <section class="login_card">
             <h1 style="color: gold;">Log in </h1>
             <p style="color: gold;">Log in to continue!</p>
+            <?php if ($message !== ''): ?>
+                <p style="color: <?php echo $isSuccess ? 'lightgreen' : '#ff7b7b'; ?>;">
+                    <?php echo htmlspecialchars($message); ?>
+                </p>
+            <?php endif; ?>
 
 
-            <form class="login_form" novalidate>
-                <input type="text" placeholder="E-mail" id="login">
-                <input type="password" placeholder="Password" id="password">
-                <button type="button" class="login_button" id="btn_login">Login</button>
-                <a href="./registrera.html" class="about_link">Dont have an account? <br> Create one today!</a>
-                <p id="login_stat_check"></p>
+            <form class="login_form" action="login.php" method="post" novalidate>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="login_button">Login</button>
+                <a href="./registrera.php" class="about_link">Dont have an account? <br> Create one today!</a>
             </form>
 
 

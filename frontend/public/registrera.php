@@ -1,3 +1,7 @@
+<?php
+$message = $_GET['message'] ?? '';
+$isSuccess = isset($_GET['success']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +21,7 @@
                 <a href="./nyheter.html"><div id="News_nav" class="nav_tab">News</div></a>
                 <a href="./telegram-bot.html"><div id="Telegram_Bot_nav" class="nav_tab">Telegram bot</div></a>
                 <a href="./about-us.html"><div id="Aboutus_nav" class="nav_tab">About us</div></a>
-                <a href="./login-signup.html"><div id="login_Signup_nav" class="nav_tab">Login/Sign up</div></a>
+                <a href="./login-signup.php"><div id="login_Signup_nav" class="nav_tab">Login/Sign up</div></a>
 
             </div>
         </nav>
@@ -28,14 +32,19 @@
         <section class="registrera_card">
             <h1 style="color: #ffd700;">Sign In</h1>
             <p style="color: gold;"> Create your account today!</p>
+            <?php if ($message !== ''): ?>
+                <p style="color: <?php echo $isSuccess ? 'lightgreen' : '#ff7b7b'; ?>;">
+                    <?php echo htmlspecialchars($message); ?>
+                </p>
+            <?php endif; ?>
 
 
-            <form class="registrera_form" novalidate>
-                <input type="text" placeholder="E-mail" >   
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <input type="password" placeholder="Confirm password">
-                <button type="button" class="registrera_button">Create Account</button>
+            <form class="registrera_form" action="register.php" method="post" novalidate>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm password" required>
+                <button type="submit" class="registrera_button">Create Account</button>
             </form>
 
 
