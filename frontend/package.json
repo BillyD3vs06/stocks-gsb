@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "php": "php -S localhost:8080 -t public",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

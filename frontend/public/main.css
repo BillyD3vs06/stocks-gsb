@@ -74,10 +74,11 @@ body.all_pages #nav_holder{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: min(94%, 1200px);
+    width: 94%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 1vw 1.2vw 0.6vw;
-    gap: 1.1vw;
+    gap: 1.1rem;
 }
 
 /* används till about-us.html för att flytta login-knappen längst till höger */
