@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<title>Min Chatbot</title>
+<style>
+    body {
+        font-family: Arial;
+        background: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .chatbox {
+        width: 350px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .messages {
+        height: 400px;
+        overflow-y: auto;
+        padding: 10px;
+    }
+
+    .input {
+        display: flex;
+        border-top: 1px solid #ddd;
+    }
+
+    input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+
+    button {
+        padding: 10px;
+        border: none;
+        background: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+
+    .bot { color: green; }
+    .user { color: blue; }
+</style>
+</head>
+<body>
+
+<div class="chatbox">
+    <div class="messages" id="messages"></div>
+    <div class="input">
+        <input type="text" id="userInput" placeholder="Skriv något...">
+        <button onclick="sendMessage()">Skicka</button>
+    </div>
+</div>
+
+<script>
+function addMessage(text, sender) {
+    const messages = document.getElementById("messages");
+    const msg = document.createElement("div");
+    msg.className = sender;
+    msg.textContent = text;
+    messages.appendChild(msg);
+    messages.scrollTop = messages.scrollHeight;
+}
+
+function getBotResponse(input) {
+    input = input.toLowerCase();
+
+    if (input.includes("hej")) {
+        return "Hej! 😊";
+    } else if (input.includes("hur mår du")) {
+        return "Jag mår bra, tack!, hur mår du ?";
+    } else if (input.includes("vad heter du")) {
+        return "Jag är din chatbot för att kunna hjälpa dig så gott jag kan🤖";
+    } else if (input.includes("guld")) {
+        return "glud priset är $goldprice, Den har ett positiv/negativ ökning på $värdeökning";
+    } else if (input.includes("silver")) {
+        return "silver priset är $silverprice, Den har ett positiv/negativ ökning på $värdeökning";
+    } else if (input.includes("olja")) {
+        return "olja priset är $oljaprice, Den har ett positiv/negativ ökning på $värdeökning";
+    } else if (input.includes("stock")) {
+        return "stock priset är $goldprice, Den har ett positiv/negativ ökning på $värdeökning";
+    } else {
+        return "Jag förstår inte riktigt...";
+    }
+}
+
+function sendMessage() {
+    const inputField = document.getElementById("userInput");
+    const text = inputField.value;
+
+    if (text === "") return;
+
+    addMessage("Du: " + text, "user");
+
+    const response = getBotResponse(text);
+    setTimeout(() => {
+        addMessage("Bot: " + response, "bot");
+    }, 500);
+
+    inputField.value = "";
+}
+</script>
+
+</body>
+</html>
