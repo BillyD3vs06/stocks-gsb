@@ -2,9 +2,11 @@ CREATE DATABASE IF NOT EXISTS finans_sida;
 USE finans_sida;
 
 CREATE TABLE IF NOT EXISTS users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    username VARCHAR(100) NOT NULL UNIQUE,
-    password_hash VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    ID INT NOT NULL AUTO_INCREMENT,
+    Email VARCHAR(255) NOT NULL,
+    Username VARCHAR(100) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    PRIMARY KEY (ID),
+    UNIQUE KEY unique_email (Email),
+    UNIQUE KEY unique_username (Username)
 );
