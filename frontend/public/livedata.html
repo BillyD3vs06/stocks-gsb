@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <script>
+        async function fetchStock(symbol) {
+  const res = await fetch(`https://api.example.com/stock/${symbol}`);
+  const data = await res.json();
+  return data.price;
+}
+        setInterval(async () => {
+  const price = await fetchStock("AAPL");
+  updateUI(price);
+  saveToLocalStorage("AAPL", price);
+}, 5000); // var 5:e sekund
+const socket = new WebSocket("wss://api.example.com/live");
+
+socket.onmessage = (event) => {
+  const data = JSON.parse(event.data);
+  updateUI(data.price);
+  saveToLocalStorage(data.symbol, data.price);
+};
+
+function saveToLocalStorage(symbol, price) {
+  const data = JSON.parse(localStorage.getItem("stocks")) || {};
+  data[symbol] = {
+    price,
+    updated: Date.now()
+  };
+  localStorage.setItem("stocks", JSON.stringify(data));
+}
+function loadFromLocalStorage() {
+  const data = JSON.parse(localStorage.getItem("stocks"));
+  if (data) {
+    Object.keys(data).forEach(symbol => {
+      updateUI(data[symbol].price);
+    });
+  }
+}
+
+
+    </script>
+    <h1>Pris: <span id="price"></span></h1>
+    <p>High: <span id="high"></span></p>
+    <p>Low: <span id="low"></span></p>
+    <p>Uppdaterad: <span id="updated"></span></p>
+</body>
+</html>
