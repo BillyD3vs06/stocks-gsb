@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Market</title>
     <link rel="stylesheet" href="main.css">
+    <script src="dropDownLogic.js" defer></script>
+    <script src="livedata.js" defer ></script>
     <style>
        
 
@@ -28,12 +30,24 @@
     </div>
   </nav>
  </header>
+ <div class="dropdown-container">
+  <select id="category">
+     <option value="">Choose category</option>
+     <option value="gold">Gold</option>
+     <option value="stock">Stocks</option>
+     <option value="crypto">Crypto</option>
+   </select>
+ 
+   <select id="value">
+     <option value="">Choose a category first</option>
+   </select>
+   </div>
 
  
-    <div id="side-bg">
+    <div id="side-bg" style="color: white;">
 
-        <div id="price">Status/Price</div>
-        <div id="value">Value</div>
+        <p style="background-color: #EFBF04; margin-top: -0.01vw;">Status/Price 
+        <input type="text" id="price1" readonly></p>
         <button id="buy">Buy</button>
         <button id="sell">Sell</button>
 

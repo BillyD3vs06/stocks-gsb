@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy/Sell</title>
     <link rel="stylesheet" href="main.css">
+    <script src="dropDownLogic.js" defer></script>
+    <script src="livedata.js" defer></script>
 </head>
 <body class="all_pages">
 <header>
@@ -28,9 +30,25 @@
         <p>Emulatorn/live</p>
     </div>
     <div id="status">
+      <div class="dropdown-container">
+        <select id="category">
+           <option value="">Choose category</option>
+           <option value="gold">Gold</option>
+           <option value="stock">Stocks</option>
+           <option value="crypto">Crypto</option>
+         </select>
+       
+         <select id="value">
+           <option value="">Choose a category first</option>
+         </select>
+         </div>
         <p>Status/Info</p><br>
-          <input type="text" readonly><br>
-          <input type="text" readonly>
+        <p style="color:white;">symbol</p> <input type="text" id="symbol" readonly><br>
+         <p style="color:white;">higest</p> <input type="text" id="high" readonly><br>
+
+         <p style="color:white;"> lowest</p> <input type="text" id="low" readonly><br>
+
+         <p style="color: white;"> current</p> <input type="text" id="price1" readonly>
         
     </div>
     </div>

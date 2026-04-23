@@ -5,7 +5,7 @@ const STORAGE_KEY = `stock:${SYMBOL}`;
 
 // ===== STATUS =====
 function setStatus(msg) {
-  const el = document.getElementById("status");
+  const el = document.getElementById("status1");
   if (el) el.innerText = msg;
 }
 
@@ -87,3 +87,20 @@ getPrice();
 
 // ===== LIVE =====
 setInterval(getPrice, 5000);
+
+async function getPrice() {
+  const res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${SYMBOL}&token=${API_KEY}`);
+  const data = await res.json();
+
+  const price = document.getElementById("price1");
+  const high = document.getElementById("high");
+  const low = document.getElementById("low");
+  const symbol = document.getElementById("symbol");
+
+  if (!price) return; // safety check
+
+  price.value = "$" + data.c;
+  high.value = "$" + data.h;
+  low.value = "$" + data.l;
+  symbol.value = SYMBOL;
+}

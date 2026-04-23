@@ -181,7 +181,7 @@ body.all_pages #nav_holder a:has(#login_Signup_nav){
     margin-left: 19% ;
 
 }
-#price{
+#s{
     background-color: #EFBF04;
 }
 
@@ -274,6 +274,7 @@ body.all_pages #nav_holder a:has(#login_Signup_nav){
 #Lägg-Till-Nyhet {
     margin: 3%;
 }
+
 
 
 #telebot_holder{
