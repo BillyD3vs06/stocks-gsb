@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Nyheter</title>
     <link rel="stylesheet" href="main.css">
+    <script src="newsLogic.js" defer></script>
 </head>
 <body class="all_pages">
     <header>
@@ -23,14 +24,14 @@
         </nav>
        </header>
        
-       <button id="Lägg-Till-Nyhet" onclick="newsButton()">Lägg till nyhet +</button>
+       <button id="Lägg-Till-Nyhet"><a href="nyheter_lägg_till.html"> lägg till nyhet +</a></button>    
        <div id="news_holder">
 <div id="news" class="news">
     <div id="picture" class="newsImage">Picture</div>
     <h3 id="new_title" class="newsTitle">News</h3>
     <p id="news_des" class="newsDes">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vel mollitia tempora illo magnam explicabo expedita dolore ratione suscipit atque, hic tenetur voluptas quo ad excepturi eos impedit. Fuga, impedit?</p>
 </div>
-
+<div id="news_holder"></div>
 </div>
        <footer>
         <div id="Contact">
@@ -40,7 +41,7 @@
           <button>Send</button>
         </div>
         </footer>
-  <script src="newsLogic.js"></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="contactFooter.js"></script>
 </body>
