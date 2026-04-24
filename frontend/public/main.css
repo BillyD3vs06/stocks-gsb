@@ -422,4 +422,17 @@ select:focus {
   outline: none;
   border-color: white;
 }
+/*nyheter publicerings sida*/
+#type{
+    background-color: white;
+    border: solid 0.2vw;
+    margin: auto;
+}
+#type_holder{
+    margin: auto;
+    background-color: grey;
+    height: 30vw;
+    width: 20vw;
+    border-radius: 4vw;
+}
 
