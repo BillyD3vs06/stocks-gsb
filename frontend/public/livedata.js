@@ -1,5 +1,5 @@
 // ===== INSTÄLLNING =====
-const API_KEY = "d7klhvhr01qiqbcusjn0d7klhvhr01qiqbcusjng"; // <-- byt till din riktiga key
+const API_KEY = "d7kv7k1r01qiqbcvsgmgd7kv7k1r01qiqbcvsgn0"; // <-- byt till din riktiga key
 const SYMBOL = "GLD"; // AAPL, GLD (guld), USO (olja)
 const STORAGE_KEY = `stock:${SYMBOL}`;
 
