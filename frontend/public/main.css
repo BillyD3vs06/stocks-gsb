@@ -236,7 +236,7 @@ body.all_pages #nav_holder a:has(#login_Signup_nav){
     display: flex;
     flex-direction: column; 
     align-items: center;
-    width: 20vw;
+    width: 100%;
     border: solid 0.1vw grey;
     background-color: lightgrey;
     border-radius: 3vw;
