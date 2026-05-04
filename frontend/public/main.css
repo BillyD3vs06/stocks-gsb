@@ -420,6 +420,7 @@ h1{
   flex-wrap: wrap;
   gap: 15px;
   background-color: #e4bf46dc;
+  border: 0.12rem solid #c89b16;
   padding: 15px;
   border-radius: 10px;
   margin-top: 1rem;
