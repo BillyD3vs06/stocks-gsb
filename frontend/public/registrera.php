@@ -15,7 +15,7 @@ $isSuccess = isset($_GET['success']);
         <div id="profit_lose_news"></div>
         <nav>
             <div id="nav_holder">
-                <a href="./index.html"><div id="Home_nav" class="nav_tab">Home</div></a>
+                <a href="./index.php"><div id="Home_nav" class="nav_tab">Home</div></a>
                 <a href="./marknad.html"><div id="Market_nav" class="nav_tab">Market</div></a>
                 <a href="./kop-salj.html"><div id="Buy_Sell_nav" class="nav_tab">Buy/Sell</div></a>
                 <a href="./nyheter.html"><div id="News_nav" class="nav_tab">News</div></a>

@@ -35,14 +35,14 @@ $user = $result->fetch_assoc();
 if (!$user) {
     $loginStatement->close();
     $connection->close();
-    header('Location: login-signup.php?message=' . urlencode('Ingen anvandare hittades med den emailen.'));
+    header('Location: login-signup.php?message=' . urlencode('No user was found with that email.'));
     exit;
 }
 
 if ($user['Password'] !== $userPassword) {
     $loginStatement->close();
     $connection->close();
-    header('Location: login-signup.php?message=' . urlencode('Fel losenord.'));
+    header('Location: login-signup.php?message=' . urlencode('Wrong Password.'));
     exit;
 }
 
@@ -53,5 +53,5 @@ $_SESSION['email'] = $user['Email'];
 $loginStatement->close();
 $connection->close();
 
-header('Location: login-signup.php?success=1&message=' . urlencode('Du ar nu inloggad som ' . $user['Username'] . '.'));
+header('Location: index.php');
 exit;

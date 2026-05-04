@@ -27,11 +27,11 @@
 /* används i navbaren pa alla sidor for rundade knappar , och centrera knappar */
 .nav_tab{
     display: flex;
-    color: gold;
+    color: goldenrod;
     align-items: center;
     justify-content: center;
     border-radius: 1.4vw;
-    background-color: #f3f3f3;
+    background-color: transparent;
 
 }
 
@@ -54,7 +54,7 @@
 
 #nav_holder .nav_tab:hover{
     color: black;
-    background-color: #EFBF04;
+    background-color: rgba(218, 165, 32, 0.78);
     border: 0.1vw solid black;
 }
 
@@ -85,6 +85,24 @@ body.all_pages #nav_holder{
 body.all_pages #nav_holder a:has(#login_Signup_nav){
     position: static;
     margin-left: 0;
+}
+
+.home_intro{
+    padding: 1.2rem 1.4rem 0;
+}
+
+.login_greeting{
+    margin: 0;
+    color: gold;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.home_panels{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.6rem;
 }
 
 
@@ -397,15 +415,16 @@ h1{
 }
 
 .dropdown-container {
-  position: absolute;
-  top: 80px;
-  right: 80px;
+  position: static;
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
-  background-color: #FFD700;
+  background-color: #e4bf46dc;
   padding: 15px;
   border-radius: 10px;
-}
+  margin-top: 1rem;
+  width: fit-content;
+} 
 
 select {
   width: 230px;
@@ -436,3 +455,12 @@ select:focus {
     border-radius: 4vw;
 }
 
+.chatbot{
+ margin-left: 84.5%;
+ height: 5vw;
+ width: 15vw;
+ border: 0.2vw solid black;
+ border-radius: 15px;
+ background-color: gold;
+ text-align: center;
+}
