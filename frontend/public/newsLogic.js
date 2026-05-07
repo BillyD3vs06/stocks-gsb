@@ -1,50 +1,91 @@
-// Lägg till nyhet
+function getCurrentNewsUser() {
+    const newsPage = document.getElementById("news_page");
+    const newsFormPage = document.getElementById("news_form_page");
+    const sourceElement = newsPage || newsFormPage;
+
+    return {
+        id: sourceElement?.dataset.currentUserId || "",
+        username: sourceElement?.dataset.currentUsername || ""
+    };
+}
+
+function getNewsList() {
+    return JSON.parse(localStorage.getItem("news")) || [];
+}
+
+function saveNewsList(newsList) {
+    localStorage.setItem("news", JSON.stringify(newsList));
+}
+
 function newsButton() {
     const titleInput = document.getElementById("type");
     const descInput = document.getElementById("des_news");
+    const currentUser = getCurrentNewsUser();
 
-    if (!titleInput || !descInput) return;
+    if (!titleInput || !descInput) {
+        return;
+    }
 
-    const title = titleInput.value;
-    const desc = descInput.value;
+    const title = titleInput.value.trim();
+    const desc = descInput.value.trim();
+
+    if (currentUser.id === "" || currentUser.username === "") {
+        alert("You must be logged in to post a news article.");
+        return;
+    }
 
     if (title === "" || desc === "") {
-        alert("Fyll i alla fält!");
+        alert("Please fill in all fields!");
         return;
     }
 
     const newsItem = {
-        title: title,
-        description: desc
+        title,
+        description: desc,
+        authorId: currentUser.id,
+        authorUsername: currentUser.username
     };
 
-    let newsList = JSON.parse(localStorage.getItem("news")) || [];
+    const newsList = getNewsList();
     newsList.push(newsItem);
+    saveNewsList(newsList);
 
-    localStorage.setItem("news", JSON.stringify(newsList));
-
-    // Rensa fält
     titleInput.value = "";
     descInput.value = "";
 
-    alert("Nyhet sparad!");
+    alert("News saved.!");
+    window.location.href = "nyheter.php";
 }
 
-
-// Visa nyheter
 function loadNews() {
-    const news_holder = document.getElementById("news_holder");
+    const newsHolder = document.getElementById("news_holder");
 
-    // Om vi inte är på rätt sida → gör inget
-    if (!news_holder) return;
+    if (!newsHolder) {
+        return;
+    }
 
-    const newsList = JSON.parse(localStorage.getItem("news")) || [];
+    const currentUser = getCurrentNewsUser();
+    const newsList = getNewsList();
 
-    news_holder.innerHTML = "";
+    newsHolder.innerHTML = "";
+
+    if (newsList.length === 0) {
+        const emptyMessage = document.createElement("p");
+        emptyMessage.className = "news_empty";
+        emptyMessage.textContent = "No news has been posted yet.";
+        newsHolder.appendChild(emptyMessage);
+        return;
+    }
 
     newsList.forEach((item, index) => {
         const mainDiv = document.createElement("div");
         mainDiv.className = "news";
+
+        const author = document.createElement("p");
+        author.className = "newsAuthor";
+        author.textContent = item.authorUsername
+            ? `Posted by: ${item.authorUsername}`
+            : "Posted by: Unknown user";
 
         const title = document.createElement("h3");
         title.className = "newsTitle";
@@ -54,35 +95,49 @@ function loadNews() {
         desc.className = "newsDes";
         desc.textContent = item.description;
 
-        // 🔴 TA BORT KNAPP
-        const deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "Ta bort";
-        deleteBtn.onclick = function () {
-            deleteNews(index);
-        };
-
+        mainDiv.appendChild(author);
         mainDiv.appendChild(title);
         mainDiv.appendChild(desc);
-        mainDiv.appendChild(deleteBtn);
 
-        news_holder.appendChild(mainDiv);
+        if (String(item.authorId || "") === String(currentUser.id) && currentUser.id !== "") {
+            const deleteBtn = document.createElement("button");
+            deleteBtn.className = "newsDelete";
+            deleteBtn.textContent = "Delete.";
+            deleteBtn.addEventListener("click", () => {
+                deleteNews(index);
+            });
+            mainDiv.appendChild(deleteBtn);
+        }
+
+        newsHolder.appendChild(mainDiv);
     });
 }
 
-
-// Ta bort nyhet
 function deleteNews(index) {
-    let newsList = JSON.parse(localStorage.getItem("news")) || [];
+    const currentUser = getCurrentNewsUser();
+    const newsList = getNewsList();
+    const selectedNews = newsList[index];
+
+    if (!selectedNews) {
+        return;
+    }
+
+    if (String(selectedNews.authorId || "") !== String(currentUser.id)) {
+        alert("You can only delete your own news articles.");
+        return;
+    }
 
     newsList.splice(index, 1);
-
-    localStorage.setItem("news", JSON.stringify(newsList));
-
+    saveNewsList(newsList);
     loadNews();
 }
 
-
-// Kör när sidan laddas
 document.addEventListener("DOMContentLoaded", function () {
+    const postButton = document.getElementById("post_news_button");
+
+    if (postButton) {
+        postButton.addEventListener("click", newsButton);
+    }
+
     loadNews();
 });

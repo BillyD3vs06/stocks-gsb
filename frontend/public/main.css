@@ -7,6 +7,13 @@
     margin-left: -0.7vw;
 }
 
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
 #nav_holder{
     display: flex;
     flex-wrap: wrap;
@@ -47,6 +54,7 @@
     width: 11vw;
     border: 0.1vw solid gold;
     text-align: center;
+    background-color: white;
 }
 
 
@@ -254,15 +262,18 @@ body.all_pages #nav_holder a:has(#login_Signup_nav){
     display: flex;
     flex-direction: column; 
     align-items: center;
-    width: 100%;
+    justify-content: space-between;
+    width: min(18rem, 100%);
+    min-height: 18rem;
     border: solid 0.1vw grey;
     background-color: lightgrey;
     border-radius: 3vw;
     padding: 1vw;
+    box-sizing: border-box;
 }
 
 .newsImage {
-    height: 10vw;
+    height: 1%;
     width: 15vw;
     border: solid 0.2vw #000;
     text-align: center;
@@ -464,4 +475,61 @@ select:focus {
  border-radius: 15px;
  background-color: gold;
  text-align: center;
+}
+
+#Lagg-Till-Nyhet{
+    width: fit-content;
+    margin: 1rem auto;
+    border: 0.1vw solid #efbf04;
+    border-radius: 1vw;
+    padding: 0.4rem 0.8rem;
+    background-color: white;
+    text-align: center;
+}
+
+#Lagg-Till-Nyhet a{
+    color: black;
+    text-decoration: none;
+}
+
+#Lagg-Till-Nyhet:hover{
+    background: yellow;
+    box-shadow: 0vw 0vw 1vw 1vw #000;
+    cursor: pointer;
+}
+
+.newsAuthor{
+    width: 100%;
+    margin: 0 0 0.7rem;
+    color: #514200;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.newsDelete{
+    align-self: flex-end;
+    margin-top: auto;
+    padding: 0.65rem 1rem;
+    border: 0.08rem solid #202020;
+    border-radius: 0.8rem;
+    background-color: gold;
+    color: black;
+    cursor: pointer;
+}
+
+.newsDelete:hover{
+    background-color: #efbf04;
+}
+
+.news_empty,
+.news_login_hint{
+    margin: 1rem auto;
+    color: #5c4a00;
+    font-weight: 700;
+    text-align: center;
+}
+
+.news_login_hint a{
+    color: #7b2f00;
 }
