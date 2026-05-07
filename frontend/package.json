@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "php": "php -S localhost:8080 -t public",
+    "link": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"Write-Host ''; Write-Host 'PHP server links:' -ForegroundColor Yellow; Write-Host 'http://localhost:8080/index.php'; Write-Host 'http://localhost:8080/login-signup.php'; Write-Host 'http://localhost:8080/nyheter.php'; Start-Process 'http://localhost:8080/index.php'\"",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
