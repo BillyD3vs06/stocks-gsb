@@ -30,13 +30,11 @@ $loggedInUsername = $_SESSION['username'] ?? '';
  </header>
 
  <section class="home_intro">
-  <?php if ($loggedInUsername !== ''): ?>
   <p
     id="login_greeting"
     class="login_greeting"
     data-username="<?php echo htmlspecialchars($loggedInUsername, ENT_QUOTES, 'UTF-8'); ?>"
   ></p>
-  <?php endif; ?>
 
   <div class="dropdown-container">
     <select id="category">
@@ -70,6 +68,7 @@ $loggedInUsername = $_SESSION['username'] ?? '';
 <script src="dropDownLogic.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="contactFooter.js"></script>
+<script src="logoutOnClose.js"></script>
 <script>
   const greetingElement = document.getElementById("login_greeting");
 
@@ -80,11 +79,13 @@ $loggedInUsername = $_SESSION['username'] ?? '';
 
     if (currentHour < 12) {
       greetingText = "Good Morning";
-    } else if (currentHour < 17) {
+    } else if (currentHour < 20) {
       greetingText = "Good Afternoon";
     }
 
-    greetingElement.textContent = `${greetingText}, ${username}`;
+    greetingElement.textContent = username !== ""
+      ? `${greetingText}, ${username}`
+      : greetingText;
   }
 </script>
   </body>

@@ -30,7 +30,7 @@ function newsButton() {
     const desc = descInput.value.trim();
 
     if (currentUser.id === "" || currentUser.username === "") {
-        alert("You must be logged in to post a news article.");
+        alert("You must be logged in to post a news article!");
         return;
     }
 

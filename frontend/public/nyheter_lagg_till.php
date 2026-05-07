@@ -29,9 +29,10 @@ $loggedInUserId = $_SESSION['user_id'] ?? '';
         <button id="post_news_button" type="button">Upload.</button>
       </div>
       <?php else: ?>
-      <p class="news_login_hint">You must be logged in to post a news article.</p>
+      <p class="news_login_hint">You must be logged in to post a news article! </p>
       <p class="news_login_hint"><a href="login-signup.php">Go to login.</a></p>
       <?php endif; ?>
     </div>
+    <script src="logoutOnClose.js"></script>
 </body>
 </html>

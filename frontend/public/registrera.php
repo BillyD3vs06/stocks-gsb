@@ -60,5 +60,6 @@ $isSuccess = isset($_GET['success']);
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="contactFooter.js"></script>
+    <script src="logoutOnClose.js"></script>
 </body>
 </html>

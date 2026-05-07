@@ -36,9 +36,11 @@ $loggedInUserId = $_SESSION['user_id'] ?? '';
       <?php if ($loggedInUsername !== ''): ?>
       <button id="Lagg-Till-Nyhet"><a href="nyheter_lagg_till.php">Add news +</a></button>
       <?php else: ?>
-      <button id="Lagg-Till-Nyhet"><a href="login-signup.php?message=You%20need%20to%20log%20in%20before%20you%20can%20post%20a%20news%20article.">Add news +</a></button>
-      <p class="news_login_hint">Log in to add or remove your own news articles.</p>
-      <?php endif; ?>
+    <button id= "Lagg-Till-Nyhet">
+      <a href="login-signup.php?message=<?php echo urlencode('You must be logged in to post a news article!'); ?>">Add news +</a>
+    </button>
+    <p class="news_login_hint">You must be logged in to post a news article! </p>
+    <?php endif; ?>
 
       <div id="news_holder"></div>
     </main>
@@ -54,5 +56,6 @@ $loggedInUserId = $_SESSION['user_id'] ?? '';
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="contactFooter.js"></script>
+    <script src="logoutOnClose.js"></script>
 </body>
 </html>

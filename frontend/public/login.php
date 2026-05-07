@@ -15,14 +15,14 @@ $email = trim($_POST['email'] ?? '');
 $userPassword = $_POST['password'] ?? '';
 
 if ($email === '' || $userPassword === '') {
-    header('Location: login-signup.php?message=' . urlencode('Email och password maste fyllas i.'));
+    header('Location: login-signup.php?message=' . urlencode('Email and password needs to be filled in.'));
     exit;
 }
 
 $connection = new mysqli($host, $username, $password, $database);
 
 if ($connection->connect_error) {
-    header('Location: login-signup.php?message=' . urlencode('Kunde inte ansluta till databasen.'));
+    header('Location: login-signup.php?message=' . urlencode('Couldnt connect to the database!'));
     exit;
 }
 
