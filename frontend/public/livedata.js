@@ -1,7 +1,7 @@
 // ===== INSTÄLLNING =====
 const API_KEY = "d7kv7k1r01qiqbcvsgmgd7kv7k1r01qiqbcvsgn0"; // <-- byt till din riktiga key
-const SYMBOL = "GLD"; // AAPL, GLD (guld), USO (olja)
-const STORAGE_KEY = `stock:${SYMBOL}`;
+let SYMBOL = "GLD"; // AAPL, GLD (guld), USO (olja)
+let STORAGE_KEY = `stock:${SYMBOL}`;
 
 // ===== STATUS =====
 function setStatus(msg) {
@@ -17,7 +17,7 @@ function formatValue(value) {
 
 // ===== LOAD CACHE =====
 function loadFromLocalStorage() {
-  const saved = localStorage.getItem(STORAGE_KEY);
+  let saved = localStorage.getItem(STORAGE_KEY);
   if (!saved) return;
 
   try {
@@ -89,13 +89,13 @@ getPrice();
 setInterval(getPrice, 5000);
 
 async function getPrice() {
-  const res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${SYMBOL}&token=${API_KEY}`);
-  const data = await res.json();
+  let res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${SYMBOL}&token=${API_KEY}`);
+  let data = await res.json();
 
-  const price = document.getElementById("price1");
-  const high = document.getElementById("high");
-  const low = document.getElementById("low");
-  const symbol = document.getElementById("symbol");
+  let price = document.getElementById("price1");
+  let high = document.getElementById("high");
+  let low = document.getElementById("low");
+  let symbol = document.getElementById("symbol");
 
   if (!price) return; // safety check
 

@@ -4,7 +4,7 @@ const value = document.getElementById("value");
 const category = document.getElementById("category");
 
 const options = {
-    gold: ["Silver", "Bronze", "Oil"],
+    commodities: ["Silver", "Bronze", "Oil","Gold"],
     stock: ["Apple", "Tesla", "Nvidia"],
     crypto: ["Bitcoin", "Ethereum", "Solana"]
 }
@@ -27,3 +27,24 @@ category.addEventListener("change", function() {
 
 
 });
+const symbolMap = {
+    Silver: "SLV",
+    Bronze: "HG=F",
+    Oil: "USO",
+    Gold: "GLD",
+    Apple: "AAPL",
+    Tesla: "TSLA",
+    Nvidia: "NVDA",
+    Bitcoin: "BINANCE:BTCUSDT",
+    Ethereum: "BINANCE:ETHUSDT",
+    Solana: "BINANCE:SOLUSDT"
+  };
+  
+  value.addEventListener("change", function () {
+    const selectedValue = value.value;
+  
+    if (symbolMap[selectedValue]) {
+      SYMBOL = symbolMap[selectedValue];
+      getPrice(); // denna kommer nu använda rätt funktion ✅
+    }
+  });
