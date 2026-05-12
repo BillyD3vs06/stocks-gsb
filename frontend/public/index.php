@@ -20,7 +20,6 @@ $loggedInUsername = $_SESSION['username'] ?? '';
     <div id="nav_holder">
       <a href="./index.php"><div id="Home_nav" class="nav_tab">Home</div></a>
       <a href="./marknad.html"><div id="Market_nav" class="nav_tab">Market</div></a>
-      <a href="./kop-salj.html"><div id="Buy_Sell_nav" class="nav_tab">Buy/Sell</div></a>
       <a href="./nyheter.php"><div id="News_nav" class="nav_tab">News</div></a>
       <a href="./telegram-bot.html"><div id="Telegram_Bot_nav" class="nav_tab">Telegram bot</div></a>
       <a href="./about-us.html"><div id="Aboutus_nav" class="nav_tab">About us</div></a>
@@ -35,19 +34,6 @@ $loggedInUsername = $_SESSION['username'] ?? '';
     class="login_greeting"
     data-username="<?php echo htmlspecialchars($loggedInUsername, ENT_QUOTES, 'UTF-8'); ?>"
   ></p>
-
-  <div class="dropdown-container">
-    <select id="category">
-      <option value="">Choose category</option>
-      <option value="gold">Gold</option>
-      <option value="stock">Stocks</option>
-      <option value="crypto">Crypto</option>
-    </select>
-
-    <select id="value">
-      <option value="">Choose a category first</option>
-    </select>
-  </div>
  </section>
 
  <div class="home_panels">

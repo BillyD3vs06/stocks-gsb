@@ -17,6 +17,38 @@ function saveNewsList(newsList) {
     localStorage.setItem("news", JSON.stringify(newsList));
 }
 
+let pendingDeleteIndex = null;
+
+function getDeletePopupElements() {
+    return {
+        overlay: document.getElementById("delete_popup_overlay"),
+        confirmButton: document.getElementById("delete_popup_confirm"),
+        cancelButton: document.getElementById("delete_popup_cancel")
+    };
+}
+
+function openDeletePopup(index) {
+    const { overlay } = getDeletePopupElements();
+
+    if (!overlay) {
+        return;
+    }
+
+    pendingDeleteIndex = index;
+    overlay.classList.remove("hidden");
+}
+
+function closeDeletePopup() {
+    const { overlay } = getDeletePopupElements();
+
+    if (!overlay) {
+        return;
+    }
+
+    pendingDeleteIndex = null;
+    overlay.classList.add("hidden");
+}
+
 function newsButton() {
     const titleInput = document.getElementById("type");
     const descInput = document.getElementById("des_news");
@@ -104,7 +136,7 @@ function loadNews() {
             deleteBtn.className = "newsDelete";
             deleteBtn.textContent = "Delete.";
             deleteBtn.addEventListener("click", () => {
-                deleteNews(index);
+                openDeletePopup(index);
             });
             mainDiv.appendChild(deleteBtn);
         }
@@ -134,10 +166,41 @@ function deleteNews(index) {
 
 document.addEventListener("DOMContentLoaded", function () {
     const postButton = document.getElementById("post_news_button");
+    const { overlay, confirmButton, cancelButton } = getDeletePopupElements();
 
     if (postButton) {
         postButton.addEventListener("click", newsButton);
     }
+
+    if (confirmButton) {
+        confirmButton.addEventListener("click", () => {
+            if (pendingDeleteIndex === null) {
+                closeDeletePopup();
+                return;
+            }
+
+            deleteNews(pendingDeleteIndex);
+            closeDeletePopup();
+        });
+    }
+
+    if (cancelButton) {
+        cancelButton.addEventListener("click", closeDeletePopup);
+    }
+
+    if (overlay) {
+        overlay.addEventListener("click", (event) => {
+            if (event.target === overlay) {
+                closeDeletePopup();
+            }
+        });
+    }
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeDeletePopup();
+        }
+    });
 
     loadNews();
 });

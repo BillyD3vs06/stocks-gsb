@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title style="color: gold;">Live Data</title>
-    <link rel="stylesheet" href="mai.css">
+    <title>Live Data</title>
+    <link rel="stylesheet" href="main.css">
     <script src="livedata.js" defer></script>
 </head>
-<body class="all_pages">
-    <main class="page_section">
-        <section id="side-bg">
-            <h1>Live Data</h1>
-            <p>Symbol:<input style="border: 0px solid; color: black;" type="text" id="symbol" readonly></p>
-            <p>Pris: <input style="border: 0px solid; color: black;" type="text" id="price1" readonly></p>
-            <p>High: <input style="border: 0px solid; color: black;" type="text" id="high"readonly></p>
-            <p>Low: <input style="border: 0px solid; color: black;" type="text" id="low" readonly></p>
-          
+<body class="all_pages live_data_page">
+    <main class="page_section live_data_shell">
+        <section id="side-bg" class="live_data_panel">
+            <h1 class="live_data_title">Live Data</h1>
+            <div class="live_data_rows">
+                <div class="live_data_row">
+                    <span class="live_data_label">Symbol</span>
+                    <input class="live_data_value" type="text" id="symbol" readonly>
+                </div>
+                <div class="live_data_row">
+                    <span class="live_data_label">Pris</span>
+                    <input class="live_data_value" type="text" id="price1" readonly>
+                </div>
+                <div class="live_data_row">
+                    <span class="live_data_label">High</span>
+                    <input class="live_data_value" type="text" id="high" readonly>
+                </div>
+                <div class="live_data_row">
+                    <span class="live_data_label">Low</span>
+                    <input class="live_data_value" type="text" id="low" readonly>
+                </div>
+            </div>
         </section>
     </main>
 </body>

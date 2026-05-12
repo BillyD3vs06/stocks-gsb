@@ -19,7 +19,6 @@ $loggedInUserId = $_SESSION['user_id'] ?? '';
           <div id="nav_holder">
             <a href="./index.php"><div id="Home_nav" class="nav_tab">Home</div></a>
             <a href="./marknad.html"><div id="Market_nav" class="nav_tab">Market</div></a>
-            <a href="./kop-salj.html"><div id="Buy_Sell_nav" class="nav_tab">Buy/Sell</div></a>
             <a href="./nyheter.php"><div id="News_nav" class="nav_tab">News</div></a>
             <a href="./telegram-bot.html"><div id="Telegram_Bot_nav" class="nav_tab">Telegram bot</div></a>
             <a href="./about-us.html"><div id="Aboutus_nav" class="nav_tab">About us</div></a>
@@ -45,6 +44,17 @@ $loggedInUserId = $_SESSION['user_id'] ?? '';
       <div id="news_holder"></div>
     </main>
 
+    <div id="delete_popup_overlay" class="delete_popup_overlay hidden">
+      <div class="delete_popup">
+        <h2 class="delete_popup_title">Delete post?</h2>
+        <p class="delete_popup_text">Are you sure you want to delete this post?</p>
+        <div class="delete_popup_actions">
+          <button id="delete_popup_cancel" type="button" class="delete_popup_button delete_popup_button_secondary">No</button>
+          <button id="delete_popup_confirm" type="button" class="delete_popup_button delete_popup_button_primary"></button>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <div id="Contact">
         <p class="contact_heading">Contact us</p>
@@ -56,6 +66,7 @@ $loggedInUserId = $_SESSION['user_id'] ?? '';
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="contactFooter.js"></script>
+    <script src="deleteButtonEffects.js"></script>
     <script src="logoutOnClose.js"></script>
 </body>
 </html>
