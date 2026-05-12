@@ -754,6 +754,11 @@ body.all_pages .page_section{
     box-sizing: border-box;
 }
 
+.login_card{
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
 input::placeholder {
     color: rgb(82, 82, 82); /* Placeholder text color */
     opacity: 1; /* Fixes opacity issues */

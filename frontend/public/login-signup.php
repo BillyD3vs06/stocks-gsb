@@ -49,14 +49,6 @@ $isSuccess = isset($_GET['success']);
 
         </section>
     </main>
-    <footer>
-        <div id="Contact">
-          <p class="contact_heading">Contact us</p>
-          <input type="text" placeholder="Your email"><br>
-          <input type="text" placeholder="Your reason for contacting us"><br>
-          <button>Send</button>
-        </div>
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="contactFooter.js"></script>
     <script src="logoutOnClose.js"></script>
