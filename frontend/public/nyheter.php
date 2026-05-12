@@ -50,7 +50,7 @@ $loggedInUserId = $_SESSION['user_id'] ?? '';
         <p class="delete_popup_text">Are you sure you want to delete this post?</p>
         <div class="delete_popup_actions">
           <button id="delete_popup_cancel" type="button" class="delete_popup_button delete_popup_button_secondary">No</button>
-          <button id="delete_popup_confirm" type="button" class="delete_popup_button delete_popup_button_primary"></button>
+          <button id="delete_popup_confirm" type="button" class="delete_popup_button delete_popup_button_primary">Yes</button>
         </div>
       </div>
     </div>
